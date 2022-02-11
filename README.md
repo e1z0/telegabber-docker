@@ -22,12 +22,16 @@ Else will be generated automatically..
 
 After running docker container connect, register and authenticate:
 * Enter JID telegabber.xmpp.lan and sign in
-* Enter /login <your phone number>
-* Confirm code sent to telegram via /code <code>
+* Enter `/login <your phone number>`
+* Confirm code sent to telegram via `/code <code>`
 
 Thats all!
 
-![pic1](/pics/scr1.png)
-![pic2](/pics/scr2.png)
-![pic3](/pics/scr3.png)
-![pic4](/pics/scr4.png)
+<img src="https://github.com/e1z0/telegabber-docker/raw/master/pics/scr1.png" width=30% height=30%>
+  
+<img src="https://github.com/e1z0/telegabber-docker/raw/master/pics/scr2.png" width=30% height=30%>
+  
+<img src="https://github.com/e1z0/telegabber-docker/raw/master/pics/scr3.png" width=30% height=30%>
+  
+<img src="https://github.com/e1z0/telegabber-docker/raw/master/pics/scr4.png" width=30% height=30%>  
+
