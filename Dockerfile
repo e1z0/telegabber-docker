@@ -18,7 +18,6 @@ COPY --from=telegabber-libs:latest /usr/local/include/td/ /usr/local/include/
 # copy telegabber
 COPY --from=telegabber-libs:latest /telegabber /root/telegabber
 
-#RUN export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig && pkg-config --variable pc_path pkg-config && \
 RUN mkdir -p /var/www/telegabber/content/ && sed -i -e '/\[::\]:80/d' /etc/nginx/sites-enabled/default
 
 # copy telegabber config

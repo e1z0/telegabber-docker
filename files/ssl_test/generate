@@ -1,9 +1,0 @@
-#!/bin/sh
-
-cert=xmpp.lan
-
-openssl req -x509 -nodes -newkey rsa:2048 \
-  -subj "/C=XX/ST=XXXX/L=XXXX/O=XXXX/OU=XXXX/CN=$cert/emailAddress=postmaster@$cert" \
-  -addext "subjectAltName = DNS:$cert, DNS:site1.example.com, DNS:site2.example.com" \
-  -keyout $cert.key \
-  -out $cert.crt

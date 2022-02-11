@@ -27,12 +27,6 @@ sed -i -e 's/allow_registration = false/allow_registration = true/' /etc/prosody
   -keyout ${MAIN_HOST}.key \
   -out ${MAIN_HOST}.crt
 
-#nginx &
-#/usr/bin/prosody &
-#sleep 3
-#cd /root/telegabber
-#/root/telegabber/telegabber &
-
 /usr/bin/supervisord -n -c /etc/supervisor/supervisord.conf &
 
 tail -F /dev/null
