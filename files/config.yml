@@ -1,0 +1,25 @@
+:telegram:
+    :loglevel: :warn
+    :content:
+        :path: '/var/www/telegabber/content' # webserver workdir
+        :link: 'http://LINK_HOST:8855/content' # webserver public address
+        :upload: 'https:///FILES_HOST' # xmpp http upload address
+    :tdlib_verbosity: 1
+    :tdlib:
+        :datadir: '/sessions/'
+        :client:
+            :api_id: 'API_ID_KEY'
+            :api_hash: 'API_ID_HASH'
+            :device_model: 'telegabber'
+            :application_version: '2.0'
+            :use_chat_info_database: false
+            :use_secret_chats: true
+            :catch_timeout: 60
+
+:xmpp:
+    :loglevel: :warn
+    :jid: 'BRIDGE_HOST'
+    :host: '127.0.0.1'
+    :port: 5347
+    :password: 'password123'
+    :db: 'session.dat'

@@ -1,0 +1,12 @@
+FROM ubuntu:20.04
+MAINTAINER justinas@eofnet.lt
+
+RUN apt-get update && apt-get -y upgrade && \
+    ln -fs /usr/share/zoneinfo/Europe/Vilnius /etc/localtime && \
+    DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends software-properties-common language-pack-en-base make git zlib1g-dev libssl-dev gperf php-cli cmake g++ prosody wget && \
+    export LC_ALL=en_US.UTF-8 && export LANG=en_US.UTF-8
+RUN git clone https://github.com/tdlib/td.git && cd td && [ -d "build" ] || mkdir build && cd build && cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX:PATH=/usr/local -DTD_ENABLE_LTO=ON .. && \
+    cmake --build . --target install && cd 
+RUN wget https://go.dev/dl/go1.17.7.linux-amd64.tar.gz && tar -C /usr/local -xzf go1.17.7.linux-amd64.tar.gz && \
+    export PATH=$PATH:/usr/local/go/bin && export GOPATH=$(go env GOPATH) && git clone https://dev.narayana.im/narayana/telegabber.git && \
+    cd telegabber/ && make && cd .. && ls

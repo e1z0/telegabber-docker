@@ -1,0 +1,21 @@
+version: '2'
+services:
+    telegabber:
+        image: telegabber:latest
+        container_name: telegabber
+        ports:
+            - "5222:5222"
+            - "5223:5223"
+            - "5269:5269"
+            - "8855:80"
+        environment:
+            TELEGRAM_API_ID: ${API_ID}
+            TELEGRAM_API_HASH: ${API_HASH}
+            MAIN_HOST: ${MAIN_HOST}
+            LINK_HOST: ${LINK_HOST}
+            BRIDGE_HOST: ${BRIDGE_HOST}
+            FILES_HOST: ${FILES_HOST}
+            TZ: "Europe/Vilnius"
+        volumes:
+            - "./data/prosody/data:/var/lib/prosody"
+            - "./data/prosody/sessions:/sessions"
