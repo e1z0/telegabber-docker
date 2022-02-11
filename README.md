@@ -1,16 +1,15 @@
-
-Complete XMPP > Telegram bridge solution in one docker [ Prosody + telegabber ]
+# Complete XMPP > Telegram bridge solution in one docker [ Prosody + telegabber ]
 
 You can now connect all your retro or non standard OS machines to telegram.
 
-
+# Prepare dns
 
 You should setup three dns'es. For my local intranet i set up these:
-* xmpp.lan .env setting MAIN_HOST
-* telegabber.xmpp.lan .env setting BRIDGE_HOST
-* media.xmpp.lan .env setting LINK_HOST
+* xmpp.lan .env setting `MAIN_HOST`
+* telegabber.xmpp.lan .env setting `BRIDGE_HOST`
+* media.xmpp.lan .env setting `LINK_HOST`
 
-# HowTo RUN?
+# Run
 
 * Move example environment file: `mv .env-example .env`
 * Edit .env value to suit your needs, you can also edit telegabber.yml (docker compose file to tune it a little bit)
@@ -18,6 +17,8 @@ You should setup three dns'es. For my local intranet i set up these:
 * Run: `make up`
 
 Else will be generated automatically..
+
+# Client side
 
 After running docker container connect, register and authenticate:
 * Enter JID telegabber.xmpp.lan and sign in
