@@ -35,3 +35,7 @@ Thats all!
   
 <img src="https://github.com/e1z0/telegabber-docker/raw/master/pics/scr4.png" width=30% height=30%>  
 
+Original software used:
+* https://dev.narayana.im/narayana/telegabber
+* https://tdlib.github.io/td/
+* https://prosody.im
