@@ -16,7 +16,7 @@ For my local intranet i set up these:
 * Move example environment file: `mv .env-example .env` 
 * Edit `.env` file values to suit your needs, Change `MAIN_HOST` and `LINK_HOST` to your corresponding dns setup. Also don't forget to set `API_ID` and `API_HASH` you will get them from https://my.telegram.org/apps
 * You can also edit telegabber.yml (docker compose file)
-* <del>Build docker images: `make build_libs && make build`<del> not necessary now
+* <del>Build docker images: `make build_libs && make build`</del> not necessary now
 * Run docker container: `make up`
 
 Else will be generated automatically..
@@ -26,7 +26,7 @@ Else will be generated automatically..
 After running docker container connect, register and authenticate:
 
 * Register account
-* Subscribe to telegabber JID or write message example.: telegabber.xmpp.lan
+* Subscribe to telegabber JID (example.: telegabber.xmpp.lan) or write message to it.
 * Enter `/login <your phone number>`
 * Confirm code sent to telegram via `/code <code>`
 
