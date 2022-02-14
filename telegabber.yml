@@ -1,7 +1,7 @@
 version: '2'
 services:
     telegabber:
-        image: telegabber:latest
+        image: nulldevil/telegabber:latest
         container_name: telegabber
         ports:
             - "5222:5222"
@@ -13,7 +13,6 @@ services:
             TELEGRAM_API_HASH: ${API_HASH}
             MAIN_HOST: ${MAIN_HOST}
             LINK_HOST: ${LINK_HOST}
-            BRIDGE_HOST: ${BRIDGE_HOST}
             FILES_HOST: ${FILES_HOST}
             TZ: "Europe/Vilnius"
         volumes:
